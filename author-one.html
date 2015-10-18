@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yugopolis</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+<link href="assets/css/foundation.min.css" rel="stylesheet">
+<link href="assets/css/yugopolis.css" rel="stylesheet">
+<link href="assets/css/likely.css" rel="stylesheet">
+
+<link href="assets/css/typography.css" rel="stylesheet">
+<link href="assets/css/topbar.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/cards.css" rel="stylesheet">
+<link href="assets/css/content.css" rel="stylesheet">
+<link href="assets/css/popup-forms.css" rel="stylesheet">
+
+<script src="assets/js/modernizr.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+
+<script src="assets/js/foundation.js"></script>
+<script src="assets/js/foundation.offcanvas.js"></script>
+<script src="assets/js/foundation.dropdown.js"></script>
+<script src="assets/js/foundation.reveal.js"></script>
+
+<script src="assets/js/backstretch.js"></script>
+<script src="assets/js/likely.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+
+<link href="assets/css/slabtext.css" rel="stylesheet">
+<script src="assets/js/jquery.slabtext.min.js"></script>
+
+<!--<script src="assets/js/flowtype.js"></script>-->
+<!--<script src="assets/js/flex-text.js"></script> -->
+<!--<script src="assets/js/jquery.flextext.js"></script> -->
+
+
+<script src="assets/js/theme.js"></script>
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var coverHeight = coverImageHeightSet();
+		coverHeight.init('assets/img/bgkol.png');
+	});
+</script>
+
+
+</head>
+
+<body>
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+<div class="page-container">
+
+<!-- Off-canvas menu -->
+
+    <div class="exit-off-canvas"></div>
+
+    <nav id="left-off-canvas-menu" class="left-off-canvas-menu">
+
+      <!--<button class="exit-off-canvas">&#215;</button> -->
+
+      <div class="side-themes">
+        <h5 class="small-header">темы</h5>
+        <ul>
+          <li><a href="#">Город</a></li>
+          <li><a href="#">Люди</a></li>
+          <li><a href="#">Ситуация</a></li>
+          <li><a href="#">Бизнес</a></li>
+          <li><a href="#">Наука и техника</a></li>
+          <li><a href="#">Спорт</a></li>
+          <li><a href="#">Weekend</a></li>
+        </ul>
+      </div>
+    
+      <hr>
+    
+      <div class="side-menu">
+        <ul>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Статьи</a></li>
+          <li><a href="#">Интервью</a></li>
+          <li><a href="#">Колонки</a></li>
+          <li><a href="#">Фоторепортажи</a></li>
+          <li><a href="#">Видео</a></li>
+          <li><a href="#">Инфографика</a></li>
+        </ul>
+      </div>
+
+      <div class="social-contacts">
+        <ul>
+          <li><a href="#"><i style="" class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+          <li><a href="#"><i class="icon-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+<!-- Top bar -->
+
+      <nav id="page-topbar" class="page-topbar" role="navigation">
+        <div class="page-width-wrapper clearfix">
+
+          <ul class="topbar-header">
+            <li class="off-canvas-toggle-wrapper"><a href="#" role="button" class="toggle-menu left-off-canvas-toggle"><i class="icon-menu"></i></a></li>
+            <li class="topbar-header__logo">
+              <a href="/">
+                <img src="assets/img/logo.png" alt="Югополис" class="big default">
+                <img src="assets/img/logo-white.png" alt="Югополис" class="big white">
+                <img src="assets/img/logosmall.png" alt="Югополис" class="small">
+              </a>
+            </li>
+          </ul>
+
+          <div class="topbar-menu">
+
+            <ul class="menu">
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Материалы</a></li>
+  					</ul>
+
+            <ul class="icons">
+              <li class="account">
+                <a href="#" title="Вход" data-reveal-id="user-login-modal"><i class="icon-login"></i></a>
+              </li>
+              <li class="toggle-search-btn">
+                <a id="toggle-search-btn-link" title="Поиск"><i class="icon-search"></i></a>
+              </li>
+
+              <li class="off-canvas-toggle-wrapper"><a href="#" role="button" class="toggle-menu left-off-canvas-toggle"><i class="icon-menu"></i></a></li>
+            </ul>
+  
+          </div> <!-- /topbar-menu -->
+
+        </div>
+      </nav> <!-- /page-topbar -->
+
+	    <section class="cover-header" data-height=".3">
+
+	      <div id="page-topbar-fix" class="page-topbar-fix"></div>
+
+      	<header class="post-header author-header">
+	       <div class="page-width-wrapper">
+          <div class="post-header-wrapper">
+
+            <div class="author-header-wrapper">
+              <div class="row collapse">
+                <div class="medium-5 large-4 column">
+                  <div class="avatar">
+                    <img src="assets/img/auth/kril4.png" alt=""/>
+                  </div>
+                </div>
+                <div class="medium-7 large-6 end column">
+                  <h3 class="title">Елена Крылова</h3>
+                  <h6 class="stat">Журналист</h6>
+                  <div class="brief">«Одиночество – привилегия личности» — крылатая фраза Черчилля, под которой двумя руками готова подписаться Елена Крылова, журналист, главный редактор газеты «Краснодарские известия». Делая, однако, оговорку о необходимости виртуального общения — некоего аналога кухонных посиделок, без которых русскому человеку не обойтись.</div>
+                </div>
+              </div>
+            </div>
+
+ 			    </div>
+         </div> <!-- /page-width-wrapper -->
+      	</header>
+
+    </section> <!-- /cover-header -->
+
+
+<!-- CONTENT -->
+
+	<div class="page-content">
+    <div class="content-wrapper">
+      <div class="page-width-wrapper">
+
+        <header class="section-info-header">
+          <h3 class="title"><a href="#">Публикации автора</a></h3>
+          <h5 class="stat">516 материалов</h5>
+        </header>
+
+
+
+      </div>
+    </div> <!-- /content-wrapper -->
+	</div> <!-- /page-content -->
+
+
+<!-- FOOTER -->
+
+    <footer class="page-footer">
+      <div class="page-width-wrapper">
+
+        <div class="footer-menu row collapse">
+        	<div class="menu medium-6 column">
+            <ul class="inline-list">
+              <li><a href="#">О проекте</a></li>
+              <li><a href="#">Реклама</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+					</div>
+          <div class="social medium-6 column clearfix">
+	          <ul class="inline-list">
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-rss"></i></a></li>
+            </ul>
+	        </div>
+        </div>
+
+        <div class="copyright clearfix">
+          <p>Свидетельство о регистрации СМИ Эл No. ФС77-40121 от 04.06.2010 г.</p>
+          <p>&copy; 2010 &ndash; 2015, OOO &quot;Югополис&quot;</p>
+        </div>
+
+        <div class="designed">
+          <span class="label radius right">18+</span>
+          <p class="design">Дизайн <a href="#">Worksterdam</a></p>
+        </div>
+
+      </div>
+    </footer>
+
+</div> <!-- /page-container -->
+
+	</div>
+ </div>
+
+<script type="text/javascript">
+	$(document).foundation();
+</script>
+
+</body>
+</html>

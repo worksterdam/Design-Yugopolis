@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+<link href="assets/css/foundation.min.css" rel="stylesheet">
+<link href="assets/css/yugopolis.css" rel="stylesheet">
+<link href="assets/css/likely.css" rel="stylesheet">
+
+<link href="assets/css/typography.css" rel="stylesheet">
+<link href="assets/css/topbar.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/cards.css" rel="stylesheet">
+<link href="assets/css/content.css" rel="stylesheet">
+<link href="assets/css/popup-forms.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/1.4.3.1/css/fluidbox.css" rel="stylesheet">
+
+<script src="assets/js/modernizr.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+
+<script src="assets/js/foundation.js"></script>
+<script src="assets/js/foundation.offcanvas.js"></script>
+<script src="assets/js/foundation.dropdown.js"></script>
+<script src="assets/js/foundation.reveal.js"></script>
+
+<script src="assets/js/backstretch.js"></script>
+<script src="assets/js/likely.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/1.4.3.1/jquery.fluidbox.min.js"></script>
+
+<link href="assets/css/slabtext.css" rel="stylesheet">
+<script src="assets/js/jquery.slabtext.min.js"></script>
+
+<script src="assets/js/theme.js"></script>
+
+</head>
+
+<body>
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+<div class="page-container">
+
+<!-- Off-canvas menu -->
+
+    <div class="exit-off-canvas"></div>
+
+    <nav id="left-off-canvas-menu" class="left-off-canvas-menu">
+
+     <!-- <button class="exit-off-canvas">&#215;</button>-->
+
+      <div class="side-themes">
+        <h5 class="small-header">темы</h5>
+        <ul>
+          <li class=""><a href="#">Город</a></li>
+          <li class=" active"><a href="#">Люди</a></li>
+          <li class=""><a href="#">Ситуация</a></li>
+          <li class=""><a href="#">Бизнес</a></li>
+          <li class=""><a href="#">Наука и техника</a></li>
+          <li class=""><a href="#">Спорт</a></li>
+          <li class=""><a href="#">Weekend</a></li>
+        </ul>
+      </div>
+    
+      <hr>
+    
+      <div class="side-menu">
+        <ul>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Статьи</a></li>
+          <li><a href="#">Интервью</a></li>
+          <li><a href="#">Колонки</a></li>
+          <li><a href="#">Фоторепортажи</a></li>
+          <li><a href="#">Видео</a></li>
+          <li><a href="#">Инфографика</a></li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="social-contacts">
+      <h5 class="small-header">Читайте нас:</h5>
+        <ul>
+        <li><a href="#"><i class="icon-rss"></i></a></li>
+          <li><a href="#"><i class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+          <li><a href="#"><i class="icon-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+<!-- Search popup -->
+
+    <div class="popup-bg" id="popup-bg"></div>
+
+    <div class="topbar-search-field" id="topbar-search-field" tabindex="-1">
+      <div class="page-width-wrapper">
+      	<a href="#" id="search-close-btn" class="search-close-btn">&#215;</a>
+        <form>
+          <div class="row collapse">
+            <div class="small-10 medium-11 column">
+              <input type="text" name="search" class="search_field" placeholder="Поиск">
+            </div>
+            <div class="small-2 medium-1 column">
+              <button class="button postfix" type="submit"><i class="icon-search"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+      <nav id="page-topbar" class="page-topbar fixed__compact" role="navigation">
+        <div class="page-width-wrapper clearfix">
+
+          <ul class="topbar-header">
+            <li class="off-canvas-toggle-wrapper"><a href="#" role="button" class="toggle-menu left-off-canvas-toggle"><i class="icon-menu"></i></a></li>
+            <li class="topbar-header__logo">
+              <a href="/">
+                <img src="assets/img/logo.png" alt="Югополис" class="big default">
+                <img src="assets/img/logosmall.png" alt="Югополис" class="small">
+              </a>
+            </li>
+            <li class="topbar-header__title">
+            	<div class="topbar-header__title-theme">Авторское</div>
+            </li>
+          </ul>
+
+        <div class="topbar-menu">
+
+          <ul class="menu">
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Материалы</a></li>
+          </ul>
+
+          <ul class="icons">
+           <li class="user">
+              <a href="#" title="Hello, Макс">
+                <img src="assets/img/user1.jpg" alt="Дядя Макс">
+              </a>
+            </li>
+
+            <li class="toggle-search-btn">
+              <a id="toggle-search-btn-link" title="Поиск"><i class="icon-search"></i></a>
+            </li>
+
+            <li class="off-canvas-toggle-wrapper"><a href="#" role="button" class="toggle-menu left-off-canvas-toggle"><i class="icon-menu"></i></a></li>
+          </ul>
+
+        </div> <!-- /topbar-menu -->
+
+      </div>
+    </nav> <!-- /page-topbar -->
+
+    <div class="author-page-bg">
+      <img src="assets/img/0610801.jpg" alt=""/>
+      
+    </div>
+
+   <div id="page-topbar-fix" class="page-topbar-fix"></div>
+
+   <div class="page-width-wrapper">
+    <div class="author-post-wrapper">
+
+      <header class="post-header post-header-center simple">
+
+       <div class="page-width-wrapper">
+        <div class="post-header-wrapper">
+
+          <div class="post-header-tag">
+            <span class="tag people">Ситуация</span>
+          </div>
+
+          <h2 class="post-header-title">Калоши счастья</h2>
+          <div class="post-header-brief">
+            <p>Колумнист «Югополиса» Сабина Бабаева — о стремлении к счастью в России.</p>
+          </div>
+          <div class="post-header-info">
+            <span class="time"><i class="icon-time"></i> 23 фев, в 12:00</span>
+          </div>
+
+          <div class="post-header-avatar">
+            <div class="avatar">
+              <img src="assets/img/auth/sab.png">
+            </div>
+            <h5 class="title">Сабина Бабаева</h5>
+            <h6 class="status">Колумнист</h6>
+          </div>
+
+        </div>
+
+       </div> <!-- /page-width-wrapper -->
+      </header>
+
+
+<!-- CONTENT -->
+
+<!--
+  Grid 2-8-2
+-->
+
+    <div class="page-content">
+      <div class="content-wrapper content-wrapper__longread">
+
+        <div class="longread-block">
+          <div class="page-width-wrapper">
+            <div class="row collapse">
+              <div class="longread-block__main medium-8 medium-offset-2 end column">
+                <div class="content-brief first-letter-big">
+                  <p>П</p>
+                  <p>очему Толстой, сказав, что все счастливые семьи счастливы одинаково, но каждая несчастливая несчастлива по-своему, тут же переходил к этим несчастным? Я понимаю, что мне никогда не стать великим писателем и зеркалом русской революции, даже если на меня свалится графский титул, Софья Андреевна каждый день будет кормить меня миндальной пастилой и я стану писать по сто страниц крутого текста в сутки. Потому что мне намного интереснее счастливые люди. Говорят, что, находясь рядом со счастливым человеком, заряжаешься его счастьем. К черту Анну Каренину, которая была несчастлива по-своему. Я тоже несчастлива по-своему и хочу быть счастливой одинаково.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="longread-block">
+          <div class="page-width-wrapper">
+            <div class="row collapse">
+              <div class="longread-block__main medium-8 medium-offset-2 end column">
+<p>Но, если верить статистике, можно всерьез напугаться и исполниться комплекса неполноценности: в России счастливо подавляющее большинство. То, которое на опрос «вы счастливы?» отвечает утвердительно. Абсолютное большинство. То есть, например, это должна быть большая часть жителей моего дома. Людей, живущих за чертой бедности. Тех, кто месяцами не оплачивает коммунальные услуги, косо смотрит в лифте на твой стаканчик кофе навынос, плохо одевается, скандалит по ночам под окнами, напившись дешевого, хм, вина. Ладно, допустим, можно быть счастливым в бедности. Тогда все эти люди улыбались бы. Думаете, они улыбаются?</p>
+<p>Думаете, они — или такие же счастливцы, но из жилых комплексов почему-то с именами русских классиков — извиняются, толкнув кого-то на улице? Думаете, не стараются везде пролезть без очереди? Думаете, пропускают вперед автобус с двумястами столь же счастливыми людьми, сидя в одиночестве в прохладном салоне лексуса?</p>
+<p>Хотя, вообще, разговор о счастье в России не ведется. В смысле, он не ведется напрямую: по телевизору о росте смертности и бедности — свидетельствах того, насколько в целом должен быть сейчас счастлив народ, — не говорится; русскую литературу и кино этот вопрос мало интересует — скорее, в унылой версии «чтобы у нас все было и нам ничего за это не было». Зато есть опросы, которые, прикидываясь, что все хорошо, спрашивают: вы счастливы? Тепло ли тебе, девица? «Тепло, Морозушко», — врет, краснея, русский человек то ли от наивности, то ли от неверия, что может быть лучше, то ли от синдрому стокгольмского.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <div class="longread-block">
+        <div class="page-width-wrapper">
+
+            <div class="quotation-card quote-left-border">
+              <blockquote>«Самое популярное слово в лексиконе россиян, обращающихся в любое учреждение, — «проблемы». Стремление к счастью? Вы не по адресу. Здесь занимаются проблемами»</blockquote>
+              <div class="caption">
+                <div class="quote-button-wrapper">
+                  <a class="button quote-button radius" href="#"><i class="icon-twitter"></i> Цитировать</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+        <div class="longread-block">
+          <div class="page-width-wrapper">
+            <div class="row collapse">
+              <div class="longread-block__main medium-8 medium-offset-2 end column">
+<p>Например, американская конституция гарантирует гражданам страны стремление к счастью — формулировка простая и пафосная, неловкая и хитрая одновременно. Ее можно прочесть как шантаж; предложение о сотрудничестве; констатацию факта; поэму. В США закон действует — отсюда хитрая машина корпоративной юриспруденции, тратящая, и успешно, кучу денег и времени на то, чтобы найти в законе лазейку. Медицина лечит — тех, кто выполняет условия соглашения с государством. Полиция эффективна — и это они, американцы, придумывают шедевры вроде «Настоящего детектива», чтобы высказаться о боли — что она не иссякнет, а, скорее, иссякнут силы человека. С нравственными вопросами идут к психологу или к священнику и далее действуют по рецепту — что из этого получится, примерно понятно, но стремление к счастью, гарантированное конституцией, имело место.</p>
+
+<p>В России алгоритмы не срабатывают, поэтому их нет. Законы местами абсурдны — но и не сказать чтобы особо действовали. Если что-то болит и мало денег, добро пожаловать в ад государственных поликлиник. Полиция эффективна настолько, что вызванного в январе участкового все еще нет в июле. Самое популярное слово в лексиконе россиян, обращающихся в любое учреждение, — «проблемы». Стремление к счастью? Вы не по адресу. Здесь занимаются проблемами.</p>
+
+<p>Впрочем, один объект все же гарантирует стремление к счастью. Только это не конституция, а телевизор. Счастьезаменитель: ни грамма настоящего сахара, пилюли на сплошной фруктозе для тех, кто ищет, что бы такого съесть, чтобы похудеть. Рецепт от российских властей всегда один и тот же, проверенный, бабушкин: ненависть к внешнему врагу, который никогда не дремлет и виноват во всех ваших бедах. Секретный ингредиент — терпение. Нужно потерпеть. Счастье не за горами.</p>
+
+<p>У Андерсена калоши счастья переносили человека в то время и в то место, в котором, по его словам, лучше всего. Естественно, он тут же сбегал прочь оттуда, ведь разница между словом и делом, словом и мыслями всегда была очевидной. По логике вещей большую часть жителей России ждет с распростертыми объятиями страна Советская, и желательно сталинский ее период, о котором они так любовно трепещут. Еще одна, небольшая часть, из депутатов и прочих политиков, голосящих о скромности, традиционных ценностях и воздержании от иностранных конфет, отправилась бы в монастыри, в те, что хорошо известны соблюдением традиционных ценностей.</p>
+
+<p>Кто останется? Наверняка тот странный процент, который на вопрос ВЦИОМ о счастье пожмет плечами, и будет прав. Потому что какое ваше собачье дело?</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div> <!-- /content-wrapper__longread -->
+
+      <div class="longread-footer">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+
+            <div class="social-share medium-6 column">
+              <h6 class="title-small">Поделиться материалом</h6>
+              <div class="likely" data-zeroes="yes" data-html="yes">
+                <div class="twitter" data-via="yugopolis"></div>
+                <div class="facebook"></div>
+                <div class="vkontakte"></div>
+                <div class="odnoklassniki"></div>
+                <div class="pinterest"></div>
+             </div>                                    
+            </div>
+
+            <div class="subscribe-form medium-5 column">
+              <form>
+                <div class="row collapse">
+                  <div class="small-8 column"><input type="email" name="email" placeholder="Подпишись на Югополис, введи свой e-mail"></div>
+                  <div class="small-4 column"><button type="submit" class="button radius postfix"><i class="icon-mail"></i> Подписаться</button></div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div> <!-- /longread-footer -->
+
+    </div> <!-- /page-content -->
+
+   </div> <!-- /author-post-wrapper -->
+  </div>
+
+
+<!-- FOOTER -->
+
+    <footer class="page-footer">
+      <div class="page-width-wrapper">
+
+        <div class="footer-menu row collapse">
+        	<div class="menu medium-6 column">
+            <ul class="inline-list">
+              <li><a href="#">О проекте</a></li>
+              <li><a href="#">Реклама</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+					</div>
+          <div class="social medium-6 column clearfix">
+	          <ul class="inline-list">
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-rss"></i></a></li>
+            </ul>
+	        </div>
+        </div>
+
+        <div class="copyright clearfix">
+                  <p>Свидетельство о регистрации СМИ Эл No. ФС77-40121 от 04.06.2010 г.</p>
+                  <p>&copy; 2010 &ndash; 2015, OOO «Югополис»</p>
+                </div>
+        
+                <div class="designed">
+                  <span class="label radius right">18+</span>
+                  <p class="design">Дизайн: <a href="#">Worksterdam</a></p>
+                </div>
+
+      </div>
+    </footer>
+
+</div> <!-- /page-container -->
+
+	</div>
+ </div>
+
+
+<script type="text/javascript">
+	$(document).foundation();
+</script>
+
+</body>
+</html>

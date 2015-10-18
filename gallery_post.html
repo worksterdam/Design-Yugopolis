@@ -1,0 +1,470 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yugopolis</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+<link href="assets/css/foundation.min.css" rel="stylesheet">
+<link href="assets/css/yugopolis.css" rel="stylesheet">
+<link href="assets/css/likely.css" rel="stylesheet">
+
+<link href="assets/css/typography.css" rel="stylesheet">
+<link href="assets/css/topbar.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/cards.css" rel="stylesheet">
+<link href="assets/css/popup-forms.css" rel="stylesheet">
+
+<script src="assets/js/modernizr.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+
+<script src="assets/js/foundation.js"></script>
+<script src="assets/js/foundation.offcanvas.js"></script>
+<script src="assets/js/foundation.dropdown.js"></script>
+
+<script src="assets/js/backstretch.js"></script>
+<script src="assets/js/likely.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+
+<script src="assets/js/theme.js"></script>
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+//		$('.cover-header').backstretch('assets/img/pic1.jpg');
+		var coverHeight = coverImageHeightSet();
+		coverHeight.init('assets/img/pic1.jpg');
+	});
+
+</script>
+
+</head>
+
+<body>
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+<div class="page-container">
+
+<!-- Off-canvas menu -->
+
+    <div class="exit-off-canvas"></div>
+
+    <nav id="left-off-canvas-menu" class="left-off-canvas-menu">
+
+     <!-- <button class="exit-off-canvas">&#215;</button>-->
+
+      <div class="side-themes">
+        <h5 class="small-header">темы</h5>
+        <ul>
+          <li><a href="#">Город</a></li>
+          <li><a href="#">Люди</a></li>
+          <li><a href="#">Ситуация</a></li>
+          <li><a href="#">Бизнес</a></li>
+          <li><a href="#">Наука и техника</a></li>
+          <li><a href="#">Спорт</a></li>
+          <li><a href="#">Weekend</a></li>
+        </ul>
+      </div>
+    
+      <hr>
+    
+      <div class="side-menu">
+        <ul>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Статьи</a></li>
+          <li><a href="#">Интервью</a></li>
+          <li><a href="#">Колонки</a></li>
+          <li><a href="gallery_index.html">Фоторепортажи</a></li>
+          <li><a href="#">Видео</a></li>
+          <li><a href="#">Инфографика</a></li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="social-contacts">
+      <h5 class="small-header">Читайте нас:</h5>
+        <ul>
+        <li><a href="#"><i class="icon-rss"></i></a></li>
+          <li><a href="#"><i class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+          <li><a href="#"><i class="icon-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+<!-- Search popup -->
+
+    <div class="popup-bg" id="popup-bg"></div>
+
+    <div class="topbar-search-field" id="topbar-search-field" tabindex="-1">
+      <div class="page-width-wrapper">
+      	<a href="#" id="search-close-btn" class="search-close-btn">&#215;</a>
+        <form>
+          <div class="row collapse">
+            <div class="small-10 medium-11 column">
+              <input type="text" name="search" class="search_field" placeholder="Поиск">
+            </div>
+            <div class="small-2 medium-1 column">
+              <button class="button postfix" type="submit"><i class="icon-search"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+      <nav id="page-topbar" class="page-topbar white_ fixed__compact hide_menu" role="navigation">
+        <div class="page-width-wrapper clearfix">
+
+          <ul class="topbar-header">
+            <li class="off-canvas-toggle-wrapper"><a href="#" role="button" class="toggle-menu left-off-canvas-toggle"><i class="icon-menu"></i></a></li>
+            <li class="topbar-header__logo">
+              <a href="index.html">
+                <img src="assets/img/logo.png" alt="Югополис" class="big default">
+                <img src="assets/img/logo-white.png" alt="Югополис" class="big white">
+                <img src="assets/img/logosmall.png" alt="Югополис" class="small">
+              </a>
+            </li>
+            <li class="topbar-header__title">
+              <div class="topbar-header__title-post">
+              	<h3>Фоторепортажи</h3>
+                <h5>Крушение A320 Как проходит поисковая операция в Альпах</h5>
+              </div>
+            </li>
+          </ul>
+
+          <div class="topbar-menu">
+
+            <ul class="menu">
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Материалы</a></li>
+  					</ul>
+
+						<ul class="social-share">
+              <li class="likely" data-zeroes="yes" data-html="yes">
+                <div class="twitter" data-via="yugopolis"></div>
+                <div class="facebook"></div>
+                <div class="vkontakte"></div>
+<!--
+                <div class="odnoklassniki"></div>
+                <div class="pinterest"></div>
+-->
+              </li>
+	          </ul>
+
+            <ul class="icons">
+<!--
+              <li class="account">
+                <a href="#" title="Вход"><i class="icon-login"></i></a>
+              </li>
+-->
+             <li class="user">
+                <a href="#" title="Hello, Макс">
+                  <img src="assets/img/user1.jpg" alt="Дядя Макс">
+                </a>
+              </li>
+
+              <li class="toggle-search-btn">
+                <a id="toggle-search-btn-link" title="Поиск"><i class="icon-search"></i></a>
+              </li>
+
+              <li class="off-canvas-toggle-wrapper"><a href="#" role="button" class="toggle-menu left-off-canvas-toggle"><i class="icon-menu"></i></a></li>
+            </ul>
+  
+          </div> <!-- /topbar-menu -->
+
+        </div>
+      </nav> <!-- /page-topbar -->
+
+    <section class="cover-header" data-height="1">
+
+	      <div id="page-topbar-fix" class="page-topbar-fix"></div>
+
+      	<header class="post-header">
+	       <div class="page-width-wrapper">
+          <div class="post-header-wrapper">
+
+            <div class="post-header-tag">
+              <span class="tag people">Ситуация</span>
+            </div>
+
+						<a href="#">
+              <h2 class="post-header-title">Крушение A320. Как проходит поисковая операция в Альпах</h2>
+              <div class="post-header-brief">
+                <p>Утром 24 марта в предгорье французских Альп разбился пассажирский самолет Airbus A320 авиакомпании Germanwings.</p>
+              </div>
+						</a>
+            <div class="post-header-info">
+              <span class="time"><i class="icon-time"></i> 23 фев, в 12:00</span>
+              <span class="author"><i class="icon-camera"></i> Евгений Резник</span>
+            </div>
+
+<!--
+            <div class="gallery-header-link">
+              <a href="#">
+                <span class="info"><i class="icon-picture"></i> 29 <b>фото</b></span>
+                <span class="link"> | <i class="icon-play"></i> смотреть</span>
+              </a>
+            </div>
+						<div class="link-to-post"><a href="#">Читать&nbsp;&rarr;</a></div>
+-->
+
+ 			    </div>
+
+          <!--<div class="post-header-info">
+            <span class="photog"><i class="icon-camera"></i> Фото: Федор Обмайкин / <a href="#">Югополис</a></span>
+          </div>-->
+
+         </div> <!-- /page-width-wrapper -->
+      	</header>
+
+    </section> <!-- /cover-header -->
+
+
+<!-- CONTENT -->
+
+    <div class="page-content">
+    	<div class="page-width-wrapper">
+
+        <div class="primary">
+
+					<article class="post-article">
+
+						<div class="text-big row collapse">
+              <div class="large-8 medium-10 column">
+            		<p>Утром 24 марта в предгорье французских Альп разбился пассажирский самолет Airbus A320 авиакомпании Germanwings. На борту летевшего из Барселоны в Дюссельдорф лайнера находились 150 человек; все они погибли. Поскольку лайнер разбился в труднодоступном райне гор, то добраться до места крушения можно только на вертолетах. «Медуза» показывает, как проходит поисковая операция в Альпах.</p>
+							</div>
+            </div>
+
+						<div class="post-picture">
+	            <img src="assets/img/w2UF3p-txH6kzeHowRozVQ.jpg"> 
+							<h3 class="post-picture-title">Вертолеты службы спасения</h3>
+              <h6 class="copyright">Фото: Jean-Paul Pelissier / Reuters / Scanpix</h6>
+            </div>
+            
+						<div class="post-picture">
+							<img src="assets/img/K-UoLc4zEUkUbZDheWYw0A.jpg">
+							<h3 class="post-picture-title">Службы спасения</h3>
+              <h6 class="copyright">Фото: Jean-Paul Pelissier / Reuters / Scanpix</h6>
+            </div>
+
+						<div class="post-picture">
+							<img src="assets/img/KaSxP3JdY8H3jipTcySWDA.jpg">
+							<h3 class="post-picture-title">Место падения самолета на карте</h3>
+              <h6 class="copyright">Фото: Boris Horvat / AFP / Scanpix</h6>
+            </div>
+
+
+						<footer class="post-article-footer row collapse">
+            
+            	<div class="social-share medium-6 column">
+                <h6 class="title-small">Поделиться материалом</h6>
+                <div class="likely" data-zeroes="yes" data-html="yes">
+                  <div class="twitter" data-via="yugopolis"></div>
+                  <div class="facebook"></div>
+                  <div class="vkontakte"></div>
+                  <div class="odnoklassniki"></div>
+                  <div class="pinterest"></div>
+               </div>                                    
+              </div>
+
+            	<div class="subscribe-form medium-5 column">
+              	<form>
+									<div class="row collapse">
+	                	<div class="small-8 column"><input type="email" name="email" placeholder="Подпишись на Югополис, введи свой e-mail"></div>
+  	              	<div class="small-4 column"><button type="submit" class="button radius postfix"><i class="icon-mail"></i> Подписаться</button></div>
+                  </div>
+                </form>
+              </div>
+            
+            </footer>
+
+          </article> <!-- /post-article -->
+
+        </div> <!-- /primary -->
+
+     </div>
+    </div> <!-- /page-content -->
+
+
+<!-- COMMENTS -->
+
+    <section class="comments-section">
+      <div class="page-width-wrapper">
+
+				<div class="row collapse">
+
+					<div class="comments-stream-container medium-8 column">
+          
+            <h3 class="col-header">15 комментариев</h3>
+
+            <div class="show-all-comments-button title-small"><a href="#" onclick="$('.comments-stream-hidden').toggle(); return false;">Показать все комментарии</a></div>
+
+					  <div class="comments-stream">
+
+          	<div class="comment">
+            	<a class="avatar" href="#"><img src="assets/img/user_man.png" alt="avatar"></a>
+              <h6>
+                <a href="#">sgorobin</a>
+                <span>Час назад</span>
+              </h6>
+              <div>
+                Распил
+              </div>
+            </div>
+
+          	<div class="comment">
+              <a class="avatar" href="#"><img src="assets/img/user2.jpg" alt="user"></a>
+              <h6>
+                <a href="#">SerNik</a>
+                <span>01.06.2015 10:00</span>
+              </h6>
+              <div>
+На пр. Чекистов полоса не нужна. ЮМР- это спальный мкр. Даже с учетом припаркованных авто общественный транспорт "ходит по расписанию". А оборудование спец. полосы- это очередные не нужные расходы из бюджета. Целесообразнее вложить эти средства вложить в более необходимые для г. Краснодара статьи расходов (ремонт дорог, освещение улиц, строительство дет. садов и т.д.). Хватить неэффективно расходовать бюджетные деньги!
+              </div>
+            </div>
+
+          </div> <!-- /comments-stream -->
+
+            <div class="comments-stream comments-stream-hidden">
+  
+              <div class="comment">
+                <a class="avatar" href="#"><img src="assets/img/user_man.png" alt="avatar"></a>
+                <h6>
+                  <a href="#">sgorobin</a>
+                  <span>Час назад</span>
+                </h6>
+                <div>
+                  Распил
+                </div>
+              </div>
+  
+              <div class="comment">
+                <a class="avatar" href="#"><img src="assets/img/user2.jpg" alt="user"></a>
+                <h6>
+                  <a href="#">SerNik</a>
+                  <span>01.06.2015 10:00</span>
+                </h6>
+                <div>
+  На пр. Чекистов полоса не нужна. ЮМР- это спальный мкр. Даже с учетом припаркованных авто общественный транспорт "ходит по расписанию". А оборудование спец. полосы- это очередные не нужные расходы из бюджета. Целесообразнее вложить эти средства вложить в более необходимые для г. Краснодара статьи расходов (ремонт дорог, освещение улиц, строительство дет. садов и т.д.). Хватить неэффективно расходовать бюджетные деньги!
+                </div>
+              </div>
+  
+              <div class="comment">
+                <a class="avatar" href="#"><img src="assets/img/user2.jpg" alt="user"></a>
+                <h6>
+                  <a href="#">SerNik</a>
+                  <span>01.06.2015 10:00</span>
+                </h6>
+                <div>
+  На пр. Чекистов полоса не нужна. ЮМР- это спальный мкр. Даже с учетом припаркованных авто общественный транспорт "ходит по расписанию". А оборудование спец. полосы- это очередные не нужные расходы из бюджета. Целесообразнее вложить эти средства вложить в более необходимые для г. Краснодара статьи расходов (ремонт дорог, освещение улиц, строительство дет. садов и т.д.). Хватить неэффективно расходовать бюджетные деньги!
+                </div>
+              </div>
+  
+            </div> <!-- /comments-stream-hidden -->
+
+            <div class="comments-stream">
+              <div class="comment comments-form">
+                <a class="avatar" href="#"><img src="assets/img/user1.jpg" alt="Max"></a>
+                <form>
+                  <textarea name="new-comment"></textarea>
+                  <div class="comment-form-footer row collapse">
+                    <div class="warning small-7 column">
+                      Внимание! Комментарии модерируются. Запрещена ненормативная лексика, а также оскорбление участников дискуссии.
+                    </div>
+                    <div class="small-5 column"><button class="button submit-button radius right">Комментировать</button></div>
+                  </div>
+                </form>
+              </div>
+						</div> <!--/comments-stream -->
+
+					</div> <!-- /comments-stream-container -->
+
+          <div class="recently-commented medium-4 column">
+            <h3 class="col-header">Последние обсуждения</h3>
+            <ul>
+              <li>
+                <span>7</span>
+                <a href="#">Игрока «Краснодара» отправляют в Германию после тяжёлой травмы</a>
+              </li>
+              <li>
+                <span>7</span>
+                <a href="#">Процесс над бандой экс-депутата Зиринова начнется в Краснодаре 12 марта</a>
+              </li>
+              <li>
+                <span>6</span>
+                <a href="#">Forbes включил Краснодар в ТОП-10 городов с отдыхом «как в Европе»</a>
+              </li>
+              <li>
+                <span>1</span>
+                <a href="#">Дом-фантом построил житель Сочи на улице Клубничной</a>
+              </li>
+            </ul>
+					</div> <!-- /recently-commented -->        
+
+        </div> <!-- /row -->
+
+			</div>
+    </section>
+
+
+<!-- FOOTER -->
+
+    <footer class="page-footer">
+      <div class="page-width-wrapper">
+
+        <div class="footer-menu row collapse">
+        	<div class="menu medium-6 column">
+            <ul class="inline-list">
+              <li><a href="#">О проекте</a></li>
+              <li><a href="#">Реклама</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+					</div>
+          <div class="social medium-6 column clearfix">
+	          <ul class="inline-list">
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-rss"></i></a></li>
+            </ul>
+	        </div>
+        </div>
+
+        <div class="copyright clearfix">
+          <p>Свидетельство о регистрации СМИ Эл No. ФС77-40121 от 04.06.2010 г.</p>
+          <p>&copy; 2010 &ndash; 2015, OOO «Югополис»</p>
+        </div>
+
+        <div class="designed">
+          <span class="label radius right">18+</span>
+          <p class="design">Дизайн: <a href="#">Worksterdam</a></p>
+        </div>
+
+      </div>
+    </footer>
+
+</div> <!-- /page-container -->
+
+	</div>
+ </div>
+
+
+<script type="text/javascript">
+	$(document).foundation();
+</script>
+
+</body>
+</html>

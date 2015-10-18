@@ -1,0 +1,794 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yugopolis</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+<link href="assets/css/foundation.min.css" rel="stylesheet">
+<link href="assets/css/yugopolis.css" rel="stylesheet">
+<link href="assets/css/likely.css" rel="stylesheet">
+
+<link href="assets/css/typography.css" rel="stylesheet">
+<link href="assets/css/topbar.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/cards.css" rel="stylesheet">
+<link href="assets/css/content.css" rel="stylesheet">
+<link href="assets/css/popup-forms.css" rel="stylesheet">
+
+<script src="assets/js/modernizr.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+
+<script src="assets/js/foundation.js"></script>
+<script src="assets/js/foundation.offcanvas.js"></script>
+<script src="assets/js/foundation.dropdown.js"></script>
+<script src="assets/js/foundation.reveal.js"></script>
+
+<script src="assets/js/backstretch.js"></script>
+<script src="assets/js/likely.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+
+<link href="assets/css/slabtext.css" rel="stylesheet">
+<script src="assets/js/jquery.slabtext.min.js"></script>
+
+<!--<script src="assets/js/flowtype.js"></script>-->
+<!--<script src="assets/js/flex-text.js"></script> -->
+<!--<script src="assets/js/jquery.flextext.js"></script> -->
+
+
+<script src="assets/js/theme.js"></script>
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<!--
+<script type="text/javascript">
+	$(window).load(function(){
+		$('.cover-header').backstretch('assets/img/title-pic.jpg');
+	});
+</script>
+-->
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var coverHeight = coverImageHeightSet();
+		coverHeight.init('assets/img/apple-wwdc.jpg');
+	});
+</script>
+
+
+</head>
+
+<body>
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+<div class="page-container">
+
+<!-- Off-canvas menu -->
+
+    <div class="exit-off-canvas"></div>
+
+    <nav id="left-off-canvas-menu" class="left-off-canvas-menu">
+
+      <!--<button class="exit-off-canvas">&#215;</button> -->
+
+      <div class="side-themes">
+        <h5 class="small-header">темы</h5>
+        <ul>
+          <li><a href="#">Город</a></li>
+          <li><a href="#">Люди</a></li>
+          <li><a href="#">Ситуация</a></li>
+          <li><a href="#">Бизнес</a></li>
+          <li><a href="#">Наука и техника</a></li>
+          <li><a href="#">Спорт</a></li>
+          <li><a href="#">Weekend</a></li>
+        </ul>
+      </div>
+    
+      <hr>
+    
+      <div class="side-menu">
+        <ul>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Статьи</a></li>
+          <li><a href="#">Интервью</a></li>
+          <li><a href="#">Колонки</a></li>
+          <li><a href="#">Фоторепортажи</a></li>
+          <li><a href="#">Видео</a></li>
+          <li><a href="#">Инфографика</a></li>
+        </ul>
+      </div>
+
+      <div class="social-contacts">
+        <ul>
+          <li><a href="#"><i style="" class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+          <li><a href="#"><i class="icon-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+<!-- Top bar -->
+
+      <nav id="page-topbar" class="page-topbar white" role="navigation">
+        <div class="page-width-wrapper clearfix">
+
+          <ul class="topbar-header">
+            <li class="off-canvas-toggle-wrapper"><a href="#" role="button" class="toggle-menu left-off-canvas-toggle"><i class="icon-menu"></i></a></li>
+            <li class="topbar-header__logo">
+              <a href="/">
+                <img src="assets/img/logo.png" alt="Югополис" class="big default">
+                <img src="assets/img/logo-white.png" alt="Югополис" class="big white">
+                <img src="assets/img/logosmall.png" alt="Югополис" class="small">
+              </a>
+            </li>
+          </ul>
+
+          <div class="topbar-menu">
+
+            <ul class="menu">
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Материалы</a></li>
+  					</ul>
+
+            <ul class="icons">
+              <li class="account">
+                <a href="#" title="Вход" data-reveal-id="user-login-modal"><i class="icon-login"></i></a>
+              </li>
+              <li class="toggle-search-btn">
+                <a id="toggle-search-btn-link" title="Поиск"><i class="icon-search"></i></a>
+              </li>
+
+              <li class="off-canvas-toggle-wrapper"><a href="#" role="button" class="toggle-menu left-off-canvas-toggle"><i class="icon-menu"></i></a></li>
+            </ul>
+  
+          </div> <!-- /topbar-menu -->
+
+        </div>
+      </nav> <!-- /page-topbar -->
+
+	    <section class="cover-header" data-height=".625">
+
+	      <div id="page-topbar-fix" class="page-topbar-fix"></div>
+
+      	<header class="post-header post-header-center">
+	       <div class="page-width-wrapper">
+          <div class="post-header-wrapper">
+
+            <div class="post-header-tag">
+              <span class="tag business">Бизнес</span>
+            </div>
+
+						<a href="#">
+              <h2 class="post-header-title">Apple представила стриминговый сервис Music</h2>
+              <div class="post-header-brief">
+                <p>Компания Apple представила стриминговый музыкальный сервис Apple Music, позволяющий слушать аудиозаписи из библиотеки iTunes, не скачивая их.</p>
+              </div>
+              <div class="post-header-info">
+                <span class="time"><i class="icon-time"></i> 9 июня, в 9:09</span>
+              </div>
+						</a>
+
+						<div class="link-to-post"><a href="#">Читать</a></div>
+
+ 			    </div>
+         </div> <!-- /page-width-wrapper -->
+      	</header>
+
+    </section> <!-- /cover-header -->
+
+<!-- CONTENT -->
+
+	<div class="page-content">
+
+    <header class="news-stream-header toolbar">
+      <div class="page-width-wrapper clearfix">
+
+        <h3 class="news-stream-header__title">Новости</h3>
+
+        <div class="news-stream-header__date">
+          <i class="icon-calend"></i>
+          <span>Сегодня</span>
+        </div>
+
+        <ul class="stream-filter">
+          <li class="selector active"><a href="#">Все</a></li>
+          <li class="selector"><a href="#">Главные</a></li>
+
+          <li class="stream-filter__dropdown">
+            <a href="#" title="Настроить ленту" class="stream-filter__dropdown__button" 
+               data-dropdown="stream-filter__dropdown__setting" 
+               aria-controls="stream-filter__dropdown__setting" 
+               aria-expanded="false"
+            >
+              <i class="icon-settings"></i>
+            </a>
+
+            <div id="stream-filter__dropdown__setting" data-dropdown-content class="stream-filter__dropdown__setting f-dropdown content" aria-hidden="true" tabindex="-1">
+
+              <h5 class="title">Список новостей</h5>
+              <ul class="stream-filter__dropdown__list-type">
+                <li class="switch">
+                  <input id="list-type-full" type="radio" checked name="news-list-type">
+                  <label for="list-type-full"><i class="icon-th"></i></label>
+                </li>
+                <li class="switch">
+                  <input id="list-type-short" type="radio" name="news-list-type">
+                  <label for="list-type-short"><i class="icon-th-list"></i></label>
+                </li>
+              </ul>
+
+              <h5 class="title">Фильтр тем</h5>
+              <ul class="items-list">
+                <li class="clearfix">
+                  <span>Город</span>
+                  <span class="switch tiny round">
+                    <input id="town-switch" type="checkbox">
+                    <label for="town-switch">Город</label>
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span>Люди</span>
+                  <span class="switch tiny round">
+                    <input id="people-switch" type="checkbox">
+                    <label for="people-switch">Люди</label>
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span>События</span>
+                  <span class="switch tiny round">
+                    <input id="events-switch" type="checkbox">
+                    <label for="events-switch">События</label>
+                  </span>
+                </li>
+              </ul>
+
+              <div class="stream-filter__dropdown__special">
+                <ul class="items-list">
+                  <li class="clearfix">
+                    <span><i class="icon-kill"></i>Криминал</span>
+                    <span class="switch tiny round">
+                      <input id="criminal-switch" type="checkbox">
+                      <label for="criminal-switch">Криминал</label>
+                    </span>
+                  </li>
+                </ul>
+                <div class="stream-filter__dropdown__note">
+                  <p>Отключив этот пункт из вашей новостной ленты исчезнут материалы содержащие убийства, насилие и проишествия</p>
+                </div>
+              </div> <!-- /stream-filter__dropdown__offensive -->
+
+            </div> <!-- /f-dropdown -->
+          </li> <!-- /stream-filter__dropdown -->
+        </ul> <!-- /stream-filter -->
+
+      </div>
+    </header> <!-- /news-stream-header -->
+
+    <div class="content-wrapper content-wrapper__news">
+      <div class="page-width-wrapper">
+        <div class="row collapse">
+
+          <div class="primary medium-9 column">
+
+            <section class="news-stream-section">
+
+              <article class="main-news">
+                <span class="time">12:58</span>
+                <div class="icon">
+                  <img src="http://www.yugopolis.ru/data/mediadb/2383/0000/1191/119155/466x10000_out__.jpg">
+                </div>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                  <p>По предварительным данным ОБ ДПС ГИБДД по г. Краснодару, 11 июня в 18.45 19-летний водитель, управляя автомобилем Hyundai Accent, двигался по ул. Ким в сторону ул. Павлова и напротив дома №54 сбил 11-летнего мальчика, ехавшего на велосипеде.</p>
+                </div>
+              </article>
+
+              <article>
+                <span class="time">12:00</span>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                  <p>По предварительным данным ОБ ДПС ГИБДД по г. Краснодару, 11 июня в 18.45 19-летний водитель, управляя автомобилем Hyundai Accent, двигался по ул. Ким в сторону ул. Павлова и напротив дома №54 сбил 11-летнего мальчика, ехавшего на велосипеде.</p>
+                </div>
+              </article>
+
+              <article>
+                <span class="time">9:00</span>
+                <div class="icon">
+                  <img src="http://www.yugopolis.ru/data/mediadb/2383/0000/1191/119155/466x10000_out__.jpg">
+                </div>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                  <p>По предварительным данным ОБ ДПС ГИБДД по г. Краснодару, 11 июня в 18.45 19-летний водитель, управляя автомобилем Hyundai Accent, двигался по ул. Ким в сторону ул. Павлова и напротив дома №54 сбил 11-летнего мальчика, ехавшего на велосипеде.</p>
+                </div>
+              </article>
+
+              <article>
+                <span class="time">7:30</span>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                  <p>По предварительным данным ОБ ДПС ГИБДД по г. Краснодару, 11 июня в 18.45 19-летний водитель, управляя автомобилем Hyundai Accent, двигался по ул. Ким в сторону ул. Павлова и напротив дома №54 сбил 11-летнего мальчика, ехавшего на велосипеде.</p>
+                </div>
+              </article>
+
+            </section>
+
+            <div class="add-more-button">
+              <a class="button radius more-button" href="#"><i class="icon-more-news"></i> Еще новости</a>
+            </div>            
+
+          </div> <!-- /primary -->
+
+          <div class="secondary medium-3 column">
+
+            <div class="banner">
+              <object width="100%" height="374"
+              type="application/x-shockwave-flash" data="http://www.yugopolis.ru/data/mediadb/2383/0000/1093/109311.swf"><param value="true" name="allowfullscreen"><param value="always" name="allowscriptaccess"><param value="high" name="quality"><param value="false" name="cachebusting"><param value="opaque" name="wmode"><param value="link1=http://www.yugopolis.ru/banner/click/651/2365&amp;clickTAG=http://www.yugopolis.ru/banner/click/651/2365&amp;banner_href=http://www.yugopolis.ru/banner/click/651/2365" name="flashvars">
+              </object>
+            </div> <!-- /banner -->
+
+          </div> <!-- /side -->
+
+        </div>
+      </div>
+    </div> <!-- /content-wrapper -->
+    
+
+   <header class="news-stream-header">
+     <div class="page-width-wrapper clearfix">
+       <div class="news-stream-header__date">
+         <a href="#">
+           <i class="icon-calend"></i>
+           <span>14 июня, понедельник</span>
+         </a>
+       </div>
+     </div>
+   </header>
+
+
+    <div class="content-wrapper content-wrapper__news">
+
+      <div class="page-width-wrapper">
+        <div class="row collapse">
+
+          <div class="primary medium-9 column">
+
+            <section class="news-stream-section">
+
+              <article class="main-news">
+                <span class="time">12:58</span>
+                <div class="icon">
+                  <img src="http://www.yugopolis.ru/data/mediadb/2383/0000/1191/119155/466x10000_out__.jpg">
+                </div>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                  <p>По предварительным данным ОБ ДПС ГИБДД по г. Краснодару, 11 июня в 18.45 19-летний водитель, управляя автомобилем Hyundai Accent, двигался по ул. Ким в сторону ул. Павлова и напротив дома №54 сбил 11-летнего мальчика, ехавшего на велосипеде.</p>
+                </div>
+              </article>
+
+              <article>
+                <span class="time">12:58</span>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                  <p>По предварительным данным ОБ ДПС ГИБДД по г. Краснодару, 11 июня в 18.45 19-летний водитель, управляя автомобилем Hyundai Accent, двигался по ул. Ким в сторону ул. Павлова и напротив дома №54 сбил 11-летнего мальчика, ехавшего на велосипеде.</p>
+                </div>
+              </article>
+
+              <article>
+                <span class="time">09:00</span>
+                <div class="icon">
+                  <img src="http://www.yugopolis.ru/data/mediadb/2383/0000/1191/119155/466x10000_out__.jpg">
+                </div>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                  <p>По предварительным данным ОБ ДПС ГИБДД по г. Краснодару, 11 июня в 18.45 19-летний водитель, управляя автомобилем Hyundai Accent, двигался по ул. Ким в сторону ул. Павлова и напротив дома №54 сбил 11-летнего мальчика, ехавшего на велосипеде.</p>
+                </div>
+              </article>
+
+              <article>
+                <span class="time">07:30</span>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                  <p>По предварительным данным ОБ ДПС ГИБДД по г. Краснодару, 11 июня в 18.45 19-летний водитель, управляя автомобилем Hyundai Accent, двигался по ул. Ким в сторону ул. Павлова и напротив дома №54 сбил 11-летнего мальчика, ехавшего на велосипеде.</p>
+                </div>
+              </article>
+
+            </section>
+
+            <div class="add-more-button">
+              <a class="button radius more-button" href="#"><i class="icon-more-news"></i> Еще новости</a>
+            </div>            
+
+          </div> <!-- /primary -->
+
+          <div class="secondary medium-3 column">
+
+            <div class="banner">
+              <object width="100%" height="374"
+              type="application/x-shockwave-flash" data="http://www.yugopolis.ru/data/mediadb/2383/0000/1093/109311.swf"><param value="true" name="allowfullscreen"><param value="always" name="allowscriptaccess"><param value="high" name="quality"><param value="false" name="cachebusting"><param value="opaque" name="wmode"><param value="link1=http://www.yugopolis.ru/banner/click/651/2365&amp;clickTAG=http://www.yugopolis.ru/banner/click/651/2365&amp;banner_href=http://www.yugopolis.ru/banner/click/651/2365" name="flashvars">
+              </object>
+            </div> <!-- /banner -->
+
+          </div> <!-- /side -->
+
+        </div>
+      </div>
+    </div> <!-- /content-wrapper -->
+
+
+<!-- Brief list -->
+
+    <header class="news-stream-header">
+       <div class="page-width-wrapper clearfix">
+         <div class="news-stream-header__date">
+           <a href="#">
+             <i class="icon-calend"></i>
+             <span>11 июня, четверг</span>
+           </a>
+         </div>
+       </div>
+     </header>
+
+    <div class="content-wrapper content-wrapper__news">
+
+      <div class="page-width-wrapper">
+        <div class="row collapse">
+
+          <div class="primary medium-9 column">
+
+            <section class="news-stream-section brief-list">
+              <article class="main-news">
+                <span class="time">07:30</span>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                </div>
+              </article>
+              <article>
+                <span class="time">07:30</span>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                </div>
+              </article>
+              <article>
+                <span class="time">07:30</span>
+                <div>
+                  <h3 class="title"><a href="#">Госдолг Краснодарского края за месяц снизился на 3,6 млрд рублей</a></h3>
+                </div>
+              </article>
+            </section>
+            
+            <div class="add-more-button">
+              <a class="button radius more-button" href="#"><i class="icon-more-news"></i> Еще новости</a>
+            </div>            
+
+          </div> <!-- /primary -->
+
+          <div class="secondary medium-3 column">
+          </div> <!-- /side -->
+
+        </div>
+      </div>
+    </div> <!-- /content-wrapper -->
+
+
+	</div> <!-- /page-content -->
+
+
+<!-- FOOTER -->
+
+    <footer class="page-footer">
+      <div class="page-width-wrapper">
+
+        <div class="footer-menu row collapse">
+        	<div class="menu medium-6 column">
+            <ul class="inline-list">
+              <li><a href="#">О проекте</a></li>
+              <li><a href="#">Реклама</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+					</div>
+          <div class="social medium-6 column clearfix">
+	          <ul class="inline-list">
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-rss"></i></a></li>
+            </ul>
+	        </div>
+        </div>
+
+        <div class="copyright clearfix">
+          <p>Свидетельство о регистрации СМИ Эл No. ФС77-40121 от 04.06.2010 г.</p>
+          <p>&copy; 2010 &ndash; 2015, OOO &quot;Югополис&quot;</p>
+        </div>
+
+        <div class="designed">
+          <span class="label radius right">18+</span>
+          <p class="design">Дизайн <a href="#">Worksterdam</a></p>
+        </div>
+
+      </div>
+    </footer>
+
+</div> <!-- /page-container -->
+
+	</div>
+ </div>
+
+  
+<!--
+	Topbar popups
+-->
+
+<!-- Search -->
+
+    <div class="popup-bg" id="popup-bg"></div>
+
+    <div class="topbar-search-field" id="topbar-search-field" tabindex="-1">
+      <div class="page-width-wrapper">
+      	<a href="#" id="search-close-btn" class="search-close-btn">&#215;</a>
+        <form>
+          <div class="row collapse">
+            <div class="small-10 medium-11 column">
+              <input type="text" name="search" class="search_field" placeholder="Поиск">
+            </div>
+            <div class="small-2 medium-1 column">
+              <button class="button postfix" type="submit"><i class="icon-search"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+<!-- Account popup -->
+
+<div id="user-account-modal" class="reveal-modal user-account-modal" data-reveal aria-labelledby="user-account-modal-title" aria-hidden="true" role="dialog">
+
+	<section class="modal-section">
+
+		<header class="modal-section__header">
+    	<div class="logo"><img src="assets/img/logo-white.png" alt="Югополис лого"></div>
+    	<h3 class="title" id="user-account-modal-title">Редактирование профиля</h3>
+    </header>
+
+		<div class="modal-section__content">
+      <div class="row">
+
+				<div class="medium-7 column">
+		    	<form class="account-form">
+          	<fieldset>
+
+              <div>
+                <div class="account-form__user-avatar clearfix">
+                  <div class="avatar">
+                    <img src="assets/img/user1.jpg">
+                  </div>
+                  <div class="avatar-tip">
+                    Используйте квадратную картинку, чтобы все было красиво
+                    <div class="load-field">
+                      <input type="file" name="avatar">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label for="fio">Имя и Фамилия</label>
+                <input type="text" name="fio" value="Максим Литвиненко">
+                <div class="field-tip">Отображается в комментариях</div>
+              </div>
+  
+              <div>
+                <label for="email">Электронная почта</label>
+                <input type="email" name="email" value="mail@mail.ru" disabled>
+                <label class="checkbox">
+                  <input type="checkbox" name="subscription" checked="checked">
+                  Получать рассылку
+                </label>
+              </div>
+  
+              <div class="buttons">
+                <button type="submit" class="button radius">Сохранить</button>
+              </div>
+
+						</fieldset>
+		      </form>
+        </div>
+
+				<div class="medium-5 column">
+          <form class="account-form">
+           	<h6 class="account-form__title">Сменить пароль:</h6>
+
+          	<fieldset>
+
+              <div>
+                <label for="email">Текущий пароль</label>
+                <input type="password" name="current-psw" value="">
+              </div>
+  
+              <div>
+                <label for="email">Новый пароль</label>
+                <input type="password" name="new-psw" value="">
+              </div>
+
+              <div class="buttons">
+                <button type="submit" class="button radius">Изменить</button>
+              </div>
+
+						</fieldset>
+          </form>
+        </div>
+
+      </div> <!-- /row -->
+    
+    </div> <!-- /modal-section__content -->
+  
+  </section>
+
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+
+</div> <!-- /#user-account-modal -->
+
+
+<!-- Register popup -->
+
+<div id="user-register-modal" class="reveal-modal user-register-modal" data-reveal aria-labelledby="user-register-modal-title" aria-hidden="true" role="dialog">
+
+	<section class="modal-section">
+
+		<header class="modal-section__header">
+    	<div class="logo"><img src="assets/img/logo-white.png" alt="Югополис лого"></div>
+    	<h3 class="title" id="user-register-modal-title">Регистрация</h3>
+    </header>
+
+		<div class="modal-section__content">
+
+      <div class="row">
+
+				<div class="medium-6 column">
+	       	<h6 class="account-form__title">Регистрация с помощью аккаунта в соц. сетях:</h6>
+          <div class="social-account-login">
+            <div><a href="#" class="button radius facebook"><i class="icon-facebook"></i> Facebook</a></div>
+            <div><a href="#" class="button radius twitter"><i class="icon-twitter"></i> Twitter</a></div>
+            <div><a href="#" class="button radius vk"><i class="icon-vkontakte"></i> Вконтакте</a></div>
+          </div>
+        </div>
+
+				<div class="medium-6 column">
+          <form class="account-form">
+           	<h6 class="account-form__title">Стандартная регистрация:</h6>
+
+          	<fieldset>
+
+              <div>
+                <label for="fio">Имя и Фамилия</label>
+                <input type="text" name="fio" value="">
+                <div class="field-tip">Отображается в комментариях</div>
+              </div>
+
+              <div>
+                <label for="email">Электронная почта</label>
+                <input type="email" name="email" value="mail@mail.ru">
+                <label class="checkbox">
+                  <input type="checkbox" name="subscription" checked="checked">
+                  Получать рассылку
+                </label>
+              </div>
+  
+              <div>
+                <label for="email">Пароль</label>
+                <input type="password" name="current-psw" value="">
+              </div>
+
+              <div class="buttons">
+                <button type="submit" class="button radius">Сохранить</button>
+              </div>
+
+              <div>
+								<div class="open-next-modal">Уже есть аккаунт, хочу <a href="#" data-reveal-id="user-login-modal">войти &rarr;</a></div>
+              </div>
+
+						</fieldset>
+          </form>
+        </div>
+
+      </div> <!-- /row -->
+
+    </div> <!-- /modal-section__content -->
+
+  </section>
+
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+
+</div> <!-- /#user-register-modal -->
+
+
+<!-- Login popup -->
+
+<div id="user-login-modal" class="reveal-modal user-login-modal" data-reveal aria-labelledby="user-login-modal-title" aria-hidden="true" role="dialog">
+
+	<section class="modal-section">
+
+		<header class="modal-section__header">
+    	<div class="logo"><img src="assets/img/logo-white.png" alt="Югополис лого"></div>
+    	<h3 class="title" id="user-login-modal-title">Авторизация</h3>
+    </header>
+
+		<div class="modal-section__content">
+
+      <div class="row">
+
+				<div class="medium-6 column">
+	       	<h6 class="account-form__title">Войти с помощью аккаунта в соц. сетях:</h6>
+          <div class="social-account-login">
+            <div><a href="#" class="button radius facebook"><i class="icon-facebook"></i> Facebook</a></div>
+            <div><a href="#" class="button radius twitter"><i class="icon-twitter"></i> Twitter</a></div>
+            <div><a href="#" class="button radius vk"><i class="icon-vkontakte"></i> Вконтакте</a></div>
+          </div>
+        </div>
+
+				<div class="medium-6 column">
+          <form class="account-form">
+           	<h6 class="account-form__title">Войти с помощью электронной почты и пароля:</h6>
+
+          	<fieldset>
+
+              <div>
+                <label for="email">Электронная почта</label>
+                <input type="email" name="email" value="">
+              </div>
+  
+              <div>
+                <label for="email">Пароль</label>
+                <input type="password" name="current-psw" value="">
+                <div class="field-tip"><a href="#">Восстановить пароль &rarr;</a></div>
+              </div>
+
+              <div>
+                <label>
+                  <input type="checkbox" name="save">
+                  Запомнить меня
+                </label>
+              </div>
+
+              <div class="buttons">
+                <button type="submit" class="button radius">Войти</button>
+              </div>
+
+              <div>
+								<div class="open-next-modal">Нет аккаунта? <a href="#" data-reveal-id="user-register-modal">Зарегистрируйтесь &rarr;</a></div>
+              </div>
+
+						</fieldset>
+          </form>
+        </div>
+
+      </div> <!-- /row -->
+
+    </div> <!-- /modal-section__content -->
+
+  </section>
+
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+
+</div> <!-- /#user-login-modal -->
+
+<!-- /Popups end -->
+
+
+<script type="text/javascript">
+	$(document).foundation();
+</script>
+
+</body>
+</html>

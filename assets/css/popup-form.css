@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* Popup forms */
+
+/**********************
+	Popup forms
+***********************/
+
+/* Topbar search form  */
+
+.topbar-search-field { display:none; position:absolute; left:0; top:3em; width:100%;  z-index:910; }
+.topbar-search-field .page-width-wrapper { position:relative; }
+
+.topbar-search-field.open { display:block; }
+.topbar-search-field .page-width-wrapper { box-shadow:0 0 10px rgba(0,0,0,.2); }
+
+.topbar-search-field form { margin:0 auto; padding-bottom:1em; max-width:600px; border-bottom: 1px solid #aaa; }
+.topbar-search-field input { margin:0; padding:0; color: #999; font-size: 1.9rem; background-color:transparent !important; border:none; box-shadow: none; }
+.topbar-search-field button { margin:0; padding:0; color: #aaa; font-size: 2.5rem; background-color:transparent; border:none; box-shadow: none; }
+.topbar-search-field button:hover,
+.topbar-search-field button:focus,
+.topbar-search-field button:active { background:none; }
+
+.topbar-search-field .search-close-btn { position:absolute; top:-1em; right:0; color:#aaa; font-size:4rem; font-weight:100; text-decoration:none; }
+.topbar-search-field .search-close-btn:hover { color:#d71a21; }
+
+.popup-bg { display:none; position:fixed; left:0; top:0; right:0; bottom:0; background-color:rgba(0,0,0,.85); z-index:900; }
+.popup-bg.show { display:block; }
+
+
+@media only screen and ( max-width: 50.975em ) {
+.topbar-header .topbar-header__title { font-size:1.7rem; }
+}
+@media only screen and ( max-width: 40em ) {
+.topbar-search-field form { padding: 1em .5em; background-color:#000; }
+.topbar-search-field .search-close-btn { right:0; }
+.topbar-search-field .search-close-btn { display:none; }
+.popup-bg.show { display:none; }
+}
+
+
+/* Account popup form */
+
+.reveal-modal { background-color: transparent; border:none; box-shadow:none; }
+.reveal-modal-bg { background-color: rgba(0,0,0,.95); }
+
+.reveal-modal .close-reveal-modal { right:0; top:.5rem; color:#aaa; font-size:4rem; line-height:.5; font-weight:100; text-decoration:none; }
+.reveal-modal .close-reveal-modal:hover { color:#d71a21; }
+
+.modal-section { margin:0 auto; max-width:700px; color:#eee; }
+.user-account-modal .modal-section { max-width:750px; }
+
+.modal-section a { color:#ddd; }
+.modal-section a:hover { color:#fff; }
+
+.modal-section__header { margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid #333; }
+.modal-section__header .logo { margin-bottom:2rem; text-align:center; }
+.modal-section__header .logo img { width:250px; }
+
+.modal-section__header .title { margin:0; color:#eee; font-size:1.9rem; font-weight:400; line-height:1.2; }
+
+.modal-section__content {}
+.modal-section__content > .row > .column:first-child { padding-right:2rem; }
+.modal-section__content > .row > .column:first-child + .column{ padding-left:2rem; border-left:1px solid #555; }
+.user-account-modal .modal-section__content > .row > .column:first-child { border-right:1px solid #555; }
+.user-account-modal .modal-section__content > .row > .column:first-child + .column{ border-left:none; }
+
+
+.modal-section .account-form {}
+.modal-section .account-form fieldset { padding:0; border:none; }
+
+.modal-section .account-form > fieldset > div { margin-bottom:1rem; }
+.modal-section .account-form > fieldset > div:last-child { margin-bottom:0; }
+
+.modal-section .account-form__title { margin:0 0 1.5rem 0; color:#eee; font-size:.8125rem; font-weight:300; }
+
+.modal-section .account-form label { display:block; margin-bottom:.4rem; color:#eee; font-size:.57rem; letter-spacing: 0.12em; font-weight:200; line-height:1; text-transform:uppercase; }
+.modal-section .account-form div label.checkbox { margin:.7rem 0 0; }
+
+.modal-section .account-form input:not([type=checkbox]) { margin:0; padding:.4rem .7rem; height:2.1rem; color: #555; border: 1px solid #ccc; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; }
+.modal-section .account-form input[type=file] { padding:0; color:#fff; border:none; }
+
+.modal-section .account-form label input[type=checkbox] { margin:0 .5rem 0 0; }
+
+.modal-section .account-form .field-tip { margin-top:.3rem; color:#999; font-size:.8rem; font-weight:300; }
+.modal-section .account-form .field-tip a { color:#999; }
+.modal-section .account-form .field-tip a:hover { color:#fff; }
+
+.modal-section .account-form .buttons { margin-top:2rem !important; }
+.modal-section .account-form .buttons .button { margin:0; padding:.4rem 1rem; color:#333; font-size:.7rem; line-height:1.5; font-weight:500; background-color:#fff; border-color:#ccc; }
+.modal-section .account-form .buttons .button:hover { color:#fff; background-color:#b30; border-color:#b30; }
+
+.modal-section .open-next-modal { margin:2.7rem 0 0; color:#aaa; font-size:.8rem; }
+.modal-section .open-next-modal a { color:#ddd; }
+.modal-section .open-next-modal a:hover { color:#fff; }
+
+@media only screen and ( max-width: 40em ) {
+	.modal-section__content > .row > .column:first-child { margin-bottom:1rem; padding-bottom:1rem; padding-right:0; border:none !important; border-bottom:1px solid #555 !important; }
+	.modal-section__content > .row > .column:first-child + .column{ padding-left:0; border:none; }
+}
+
+/* Account popup form: User avatar */
+
+.account-form__user-avatar {}
+.account-form__user-avatar .avatar { float:left; width:80px; border:1px solid #fff; border-radius:100%; overflow:hidden; }
+.account-form__user-avatar .avatar img { width:80px; height:auto; }
+.account-form__user-avatar .avatar-tip { margin-left:95px; max-width: 260px; color: #999; font-size: .8rem; font-style: italic; font-weight: 300; letter-spacing: 0.02em; }
+
+.account-form__user-avatar .load-field { margin:1rem 0 0; }
+
+/* Account popup form: social login */
+
+
+.modal-section .social-account-login {}
+.modal-section .social-account-login div { margin-bottom:.65rem; }
+
+.modal-section .social-account-login .button { margin:0; padding:.4rem 1rem; width:200px; color:#fff; font-size:.875rem; line-height:1.4; text-transform:none; text-align:left; box-sizing:border-box; }
+.modal-section .social-account-login .button.facebook { background-color:#425184; border-color:#425184; }
+.modal-section .social-account-login .button.twitter { background-color:#18a7e1; border-color:#18a7e1; }
+.modal-section .social-account-login .button.vk { background-color:#286090; border-color:#286090; }
+.modal-section .social-account-login .button:hover { background-color:#d71a21; border-color:#d71a21; }
+
+.modal-section .social-account-login .button i { margin-right:.3rem; }
+

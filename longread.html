@@ -1,0 +1,682 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yugopolis</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+<link href="assets/css/foundation.min.css" rel="stylesheet">
+<link href="assets/css/yugopolis.css" rel="stylesheet">
+<link href="assets/css/likely.css" rel="stylesheet">
+
+<link href="assets/css/typography.css" rel="stylesheet">
+<link href="assets/css/topbar.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/cards.css" rel="stylesheet">
+<link href="assets/css/content.css" rel="stylesheet">
+<link href="assets/css/popup-forms.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/1.4.3.1/css/fluidbox.css" rel="stylesheet">
+
+<script src="assets/js/modernizr.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+
+<script src="assets/js/foundation.js"></script>
+<script src="assets/js/foundation.offcanvas.js"></script>
+<script src="assets/js/foundation.dropdown.js"></script>
+<script src="assets/js/foundation.reveal.js"></script>
+
+<script src="assets/js/backstretch.js"></script>
+<script src="assets/js/likely.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/1.4.3.1/jquery.fluidbox.min.js"></script>
+
+<link href="assets/css/slabtext.css" rel="stylesheet">
+<script src="assets/js/jquery.slabtext.min.js"></script>
+
+<!--<script src="assets/js/flowtype.js"></script>-->
+<!--<script src="assets/js/flex-text.js"></script> -->
+<!--<script src="assets/js/jquery.flextext.js"></script> -->
+
+
+<script src="assets/js/theme.js"></script>
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<!--
+<script type="text/javascript">
+	$(window).load(function(){
+		$('.cover-header').backstretch('assets/img/title-pic.jpg');
+	});
+</script>
+-->
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var coverHeight = coverImageHeightSet();
+		coverHeight.init('assets/img/apple-wwdc.jpg');
+	});
+</script>
+
+
+</head>
+
+<body>
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+<div class="page-container">
+
+<!-- Off-canvas menu -->
+
+    <div class="exit-off-canvas"></div>
+
+    <nav id="left-off-canvas-menu" class="left-off-canvas-menu">
+
+      <!--<button class="exit-off-canvas">&#215;</button> -->
+
+      <div class="side-themes">
+        <h5 class="small-header">темы</h5>
+        <ul>
+          <li><a href="#">Город</a></li>
+          <li><a href="#">Люди</a></li>
+          <li><a href="#">Ситуация</a></li>
+          <li><a href="#">Бизнес</a></li>
+          <li><a href="#">Наука и техника</a></li>
+          <li><a href="#">Спорт</a></li>
+          <li><a href="#">Weekend</a></li>
+        </ul>
+      </div>
+    
+      <hr>
+    
+      <div class="side-menu">
+        <ul>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Статьи</a></li>
+          <li><a href="#">Интервью</a></li>
+          <li><a href="#">Колонки</a></li>
+          <li><a href="#">Фоторепортажи</a></li>
+          <li><a href="#">Видео</a></li>
+          <li><a href="#">Инфографика</a></li>
+        </ul>
+      </div>
+
+      <div class="social-contacts">
+        <ul>
+          <li><a href="#"><i style="" class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+          <li><a href="#"><i class="icon-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+<!-- Top bar -->
+
+      <nav id="page-topbar" class="page-topbar white" role="navigation">
+        <div class="page-width-wrapper clearfix">
+
+          <ul class="topbar-header">
+            <li class="off-canvas-toggle-wrapper"><a href="#" role="button" class="toggle-menu left-off-canvas-toggle"><i class="icon-menu"></i></a></li>
+            <li class="topbar-header__logo">
+              <a href="/">
+                <img src="assets/img/logo.png" alt="Югополис" class="big default">
+                <img src="assets/img/logo-white.png" alt="Югополис" class="big white">
+                <img src="assets/img/logosmall.png" alt="Югополис" class="small">
+              </a>
+            </li>
+          </ul>
+
+          <div class="topbar-menu">
+
+            <ul class="menu">
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Материалы</a></li>
+  					</ul>
+
+            <ul class="icons">
+              <li class="account">
+                <a href="#" title="Вход" data-reveal-id="user-login-modal"><i class="icon-login"></i></a>
+              </li>
+              <li class="toggle-search-btn">
+                <a id="toggle-search-btn-link" title="Поиск"><i class="icon-search"></i></a>
+              </li>
+
+              <li class="off-canvas-toggle-wrapper"><a href="#" role="button" class="toggle-menu left-off-canvas-toggle"><i class="icon-menu"></i></a></li>
+            </ul>
+  
+          </div> <!-- /topbar-menu -->
+
+        </div>
+      </nav> <!-- /page-topbar -->
+
+	    <section class="cover-header" data-height=".625">
+
+	      <div id="page-topbar-fix" class="page-topbar-fix"></div>
+
+      	<header class="post-header">
+	       <div class="page-width-wrapper">
+          <div class="post-header-wrapper">
+
+            <div class="post-header-tag">
+              <span class="tag business">Бизнес</span>
+            </div>
+
+						<a href="#">
+              <h2 class="post-header-title">Apple представила стриминговый сервис Music</h2>
+              <div class="post-header-brief">
+                <p>Компания Apple представила стриминговый музыкальный сервис Apple Music, позволяющий слушать аудиозаписи из библиотеки iTunes, не скачивая их.</p>
+              </div>
+              <div class="post-header-info">
+                <span class="time"><i class="icon-time"></i> 9 июня, в 9:09</span>
+              </div>
+						</a>
+
+						<div class="link-to-post"><a href="#">Читать</a></div>
+
+ 			    </div>
+         </div> <!-- /page-width-wrapper -->
+      	</header>
+
+    </section> <!-- /cover-header -->
+
+
+<!-- CONTENT -->
+
+<!-- 
+  2-7-3 grid
+  <div class="longread-block__main medium-7 medium-push-2 column"></div>
+  <div class="medium-2 medium-pull-7 column"></div>
+  <div class="medium-3 column"></div>
+
+  0-7-0 grid
+  <div class="longread-block__main medium-7 medium-offset-2 end column"></div>
+
+
+-->
+
+	<div class="page-content">
+    <div class="content-wrapper content-wrapper__longread">
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-7 medium-offset-2 end column">
+              <div class="content-brief">
+                <p>Славную победу одержал на днях известный борец за нравственность, предводитель нереестровых казаков, «доктор богословия» Альберт Гаямян. Краснодарский концерт музыканта Noize MC, против которого отважно выступил наш неистовый местный Савонарола, концерт, который должен был пройти не в храме, не в детском саду и не в квартире Альберта Гаямяна; на который не было потрачено ни копейки бюджетных денег; который собирались посетить взрослые дееспособные граждане, <a href="#">был официально отменён</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-7 medium-push-2 column">
+
+              <p>Не будучи профильным специалистом, затрудняюсь в точности установить, что на сей раз вызвало гнев и волнение активиста. Сам он в качестве причины указывает прошлогодние высказывания Нойза в поддержку Украины. Но весенний авитаминоз и недавнее полнолуние, на мой взгляд, тоже не стоит сбрасывать со счетов.</p>
+<p> Знатоков и тонких ценителей абсурда, вроде меня, особенно порадовало официальное письмо за подписью начальника управления культуры администрации Краснодара, рекомендующее устроителям концерта по возможности от его проведения воздержаться. «В целях предотвращения возможных нарушений действующего законодательства», а также «учитывая многочисленные обращения жителей города Краснодара» (сколько же жалоб успел накатать неугомонный Гаямян всего за пару дней?)</p>
+<p> Оказывается, мало нам было официальных бесогонов, теперь они усилились целым штатом выходцев из народа, доморощенных духовных гуру.</p>
+
+            </div>
+            <div class="medium-2 medium-pull-7 column">
+              <div class="side-stat">
+                <h5>41,6</h5>
+                <p class="red">миллиардов долларов</p>
+                <p>составил общий объём российского экспорта в Китай в 2014 году, по данным Главного таможенного управления КНР</p>
+              </div>
+            </div>
+
+            <div class="medium-3 column">
+              <div class="related-posts">
+                <h5 class="title-small"><a href="#">Материалы по теме</a></h5>
+                <ul class="news-list">
+                  <li>
+                    <a href="#"><img src="assets/img/319x213_out__.jpg"></a>
+                    <h5 class="title"><a href="#">На Кубани на 18 лет осужден мужчина, сжегший трупы своих жертв <span class="time">10:32</span></a></h5>
+                  </li>
+                  <li>
+                    <h5 class="title"><a href="#">Биржевой курс доллара упал ниже 51 рубля <span class="time">10:07</span></a></h5>
+                  </li>
+                  <li>
+                    <h5 class="title"><a href="#">Работы по берегоукреплению реки Кубань в Краснодаре оценены в 6 млрд рублей 22 Апреля <span class="time">9:51</span></a></h5>
+                  </li>
+                </ul>
+              </div> <!-- /related-posts -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+
+            <div class="quotation-card quote-left">
+              <blockquote>Знатоков и тонких ценителей абсурда, вроде меня, особенно порадовало официальное письмо за подписью начальника управления культуры администрации Краснодара, рекомендующее устроителям концерта по возможности от его проведения воздержаться</blockquote>
+              <div class="caption">
+                <div class="quote-button-wrapper">
+                  <a class="button quote-button radius" href="#"><i class="icon-twitter"></i> Цитировать</a>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-7 medium-offset-2 end column">
+              <p>Отрадно видеть, сколь близко к сердцу принимают городские чиновники «многочисленные обращения жителей Краснодара». Надо полагать, многочисленные жалобы краснодарцев на уничтожение Карасунов, вырубку зелёных зон и точечную застройку центра также не останутся без внимания и трогательных рекомендаций прекратить «возможные нарушения действующего законодательства».</p>
+<p>Единодушие, воцарившееся между городскими властями, городскими сумасшедшими и прокуратурой, распахивает перед нами доселе невиданные горизонты. Товарищи, чьи официальные титулы — веская причина немедленно начать набирать «03», теперь рулят культурой и решают, кому можно давать концерт, а кому нельзя. А местные чиновники в очередной раз позорятся на всю страну и выставляют Кубань заповедником непуганых гоблинов.</p>
+<p>«Вовлечение в бред» — так психиатры называют случаи, когда здоровые люди идут на поводу у нездоровых.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+
+            <div class="longread-block__main medium-7 medium-push-2 column">
+<p>А мы ещё, помнится, смеялись над «Коммунистами России», требовавшими запретить концерт Хулио Иглесиаса по причинам сомнительности его имени и репертуара. Зря смеялись. Сейчас можно смело сказать, что эти достойные люди просто слегка опередили своё время. Выдача разрешения на культурно-массовое мероприятие теперь должна выглядеть примерно так: «Ой, я не знаю, это уж как Альберт Александрович решит».</p>
+<p>Культура — это ж такое дело: чуть ослабишь хватку — вылезет какой-нибудь Нойз, Шнур или того страшнее — Сергей Лазарев. В современной российской музыке много ужасного и подозрительного: танцы Ивана Дорна, длина юбок певицы Натали, расстёгнутая до пояса рубашка Стаса Михайлова... Непочатый край работы для самоназначенных краснодарских культуртрегеров.</p><p>Конечно, в идеале во избежание всяческих соблазнов лучше бы и вовсе ограничить местные музыкальные события фестивалем духовных песнопений «Во славу Господа и Кубани».</p>
+<p>Это не первая победа, одержанная в Краснодаре предводителями нереестровых команчей, да и, бог даст, не последняя. Им до сих пор греет душу бессмертный подвиг по оплёвыванию Марата Гельмана, имевшего глупость привезти сюда выставку «Icons».</p>
+<p>Давайте вместе вспомним славные этапы большого пути, которым шло становление кубанского отделения «Святого отдела расследований еретической греховности». Следующей после выставки Гельмана целью молодых генералов культурной революции стала анатомическая экспозиция «Тайны тела». Много крови попортили активисты её устроителям, а контрольный выстрел произвела краевая прокуратура, оштрафовавшая незадачливых организаторов на 20 тысяч рублей за допуск на показ несовершеннолетних, которым это могло нанести «непоправимый психический вред».</p>
+            </div>
+
+            <div class="medium-2 medium-pull-7 column"></div>
+
+            <div class="medium-3 column">
+              <div class="quotation-card quote-top">
+                <blockquote>
+                  «Вовлечение в бред» — так психиатры называют случаи, когда здоровые люди идут на поводу у нездоровых.
+                </blockquote>
+                <div class="caption">
+                  <div class="quote-button-wrapper">
+                    <a class="button quote-button radius" href="#"><i class="icon-twitter"></i> Цитировать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+
+            <div class="longread-block__main medium-7 medium-push-2 column">
+<p>Страшно интересно, кстати, какие выставки посещали в детстве люди, которые позднее ощутили в себе призвание докторов богословия, хоругвеносцев и прочих православных активистов. Куда, спрашивается, в те годы смотрела прокуратура?</p>
+<p>Со временем Остапов всё больше несло, и они заваливали правоохранителей тоннами кляуз и доносов на музыкальный фестиваль «Кубана». Пьянство, разврат и непатриотичное голое выступление Noize MC — таков, по мнению жалобщиков, далеко не полный список преступлений организаторов фестиваля.</p>
+            </div>
+
+            <div class="medium-2 medium-pull-7 column end">
+              <div class="side-stat">
+                <h5>41,6</h5>
+                <p class="red">миллиардов долларов</p>
+                <p>составил общий объём российского экспорта в Китай в 2014 году, по данным Главного таможенного управления КНР</p>
+              </div>
+            </div>
+
+            <div class="medium-3 column"></div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="longread-block">
+        <div class="media-block">
+          <div class="media-block__media">
+            <img src="assets/img/noiz.jpg" alt="Alt"/>
+          </div>
+          <div class="media-block__caption">
+            <h5 class="title">Подпись для фото</h5>
+            <h6 class="copyright"><i class="icon-camera"></i> Федор Обмайкин / <a href="#">Югополис</a></h6>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="longread-block">
+
+        <div class="colored-list">
+          <div class="colored-list__item">
+            <div class="page-width-wrapper">
+              <div class="row collapse">
+                <div class="longread-block__main small-10 small-offset-2 medium-7 end column">
+  <p>Беспроигрышная стратегия запретов «именем кардинала» внезапно дала сбой на фильме «50 оттенков серого». Ещё один видный борец за нравственность, православный активист Роман Плюта, в свободное от борьбы со «Старбаксом» время требовал, чтобы министерство культуры Краснодарского края спасло кубанцев от показа богомерзкого эротического фильма. Министерство культуры с готовностью поддержало воззвание и распространило по кинотеатрам циркуляр с предписанием демонстрировать гнусную картину исключительно под покровом ночи.</p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- /colored-list__item -->
+          
+          <div class="colored-list__item">
+            <div class="page-width-wrapper">
+              <div class="row collapse">
+                <div class="longread-block__main small-10 small-offset-2 medium-7 end column">
+  <p>Беспроигрышная стратегия запретов «именем кардинала» внезапно дала сбой на фильме «50 оттенков серого». Ещё один видный борец за нравственность, православный активист Роман Плюта, в свободное от борьбы со «Старбаксом» время требовал, чтобы министерство культуры Краснодарского края спасло кубанцев от показа богомерзкого эротического фильма. Министерство культуры с готовностью поддержало воззвание и распространило по кинотеатрам циркуляр с предписанием демонстрировать гнусную картину исключительно под покровом ночи.</p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- /colored-list__item -->
+
+        </div> <!-- /colored-list -->
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-7 medium-offset-2 end column">
+<p>Отрадно видеть, сколь близко к сердцу принимают городские чиновники «многочисленные обращения жителей Краснодара». Надо полагать, многочисленные жалобы краснодарцев на уничтожение Карасунов, вырубку зелёных зон и точечную застройку центра также не останутся без внимания и трогательных рекомендаций прекратить «возможные нарушения действующего законодательства».</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="media-block">
+            <div class="media-block__media">
+                <img src="http://www.yugopolis.ru/data/mediadb/2383/0000/1168/116819/655x10000_out__.jpg" alt="Alt"/>
+            </div>
+            <div class="media-block__caption">
+              <h6 class="copyright"><i class="icon-camera"></i> Федор Обмайкин / <a href="#">Югополис</a></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-7 medium-offset-2 end column">
+<p>Конечно, к весне 2015 года духовная борьба на местах несколько померкла на фоне всероссийского осатанения. Федеральное министерство культуры по уровню мракобесия теперь даст сто очков вперёд самым замшелым региональным подразделениям. Но краснодарская инициатива по прессованию частных концертных агентств и ночных клубов – это всё-таки ещё один маленький шажок назад.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-7 medium-offset-2 end column">
+              <div class="insert-grey">
+                <p>Можно смириться с тем, что репертуар наших бюджетных культурных учреждений превратился в сплошной Праздник урожая во Дворце труда. С пугающим обилием народныххоров «Дубинушка» и с приглашением на празднование краснодарского Дня города замшелостей типа Игоря Николаева.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-7 medium-offset-2 end column">
+              <div class="insert-yellow">
+                <mark>Можно смириться с тем, что репертуар наших бюджетных культурных учреждений превратился в сплошной Праздник урожая во Дворце труда. С пугающим обилием народныххоров «Дубинушка» и с приглашением на празднование краснодарского Дня города замшелостей типа Игоря Николаева.</mark>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-7 medium-offset-2 end column">
+<p>Но ёлки-палки, нельзя ли не совать свои патриотичные и высокодуховные лапти в каждую щель? Можно мы сами, без помощи православных активистов будем решать, какие концерты, выставки и фестивали нам за свои деньги посещать?</p>
+<p>Не нравится вам Нойз? Ну так не ходите. Организуйте концерт Вики Цыгановой, привезите передвижную выставку Ильи Глазунова и у себя в автомобиле слушайте исключительно радио «Радонеж».</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+
+          <div class="media-block">
+            <div class="media-block__media">
+              <div class="mozaic-gallery">
+                <div class="row small-collapse medium-uncollapse">
+                  <a class="medium-6 column" href="http://i.imgur.com/UvGHJjo.jpg">
+                    <img src="http://i.imgur.com/UvGHJjo.jpg">
+                  </a>
+                  <a class="medium-6 column" href="http://i.imgur.com/esWWGbF.jpg">
+                    <img src="http://i.imgur.com/esWWGbF.jpg">
+                  </a>
+                  <a class="medium-4 column" href="http://i.imgur.com/ZCogT10.jpg">
+                    <img src="http://i.imgur.com/ZCogT10.jpg">
+                  </a>
+                  <a class="medium-4 column" href="http://i.imgur.com/24hrPQn.jpg">
+                    <img src="http://i.imgur.com/24hrPQn.jpg">
+                  </a>
+                  <a class="medium-4 column" href="http://i.imgur.com/UvGHJjo.jpg">
+                    <img src="http://i.imgur.com/UvGHJjo.jpg">
+                  </a>
+                </div>
+              </div> <!-- /mozaic-gallery -->
+            </div> <!-- /media-block__media -->
+
+            <div class="media-block__caption">
+              <h5 class="title">Название галереи</h5>
+              <h6 class="copyright"><i class="icon-camera"></i> Фото: Федор Обмайкин, Евгений Резник, Вячеслав Кутеев, Сергей Иванов, Артур Константиновский / <a href="#">Югополис</a></h6>
+            </div>
+          </div> <!-- /media-block -->
+        </div>
+      </div>
+
+      
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-7 medium-offset-2 end column">
+<p>Не нравится вам Нойз? Ну так не ходите. Организуйте концерт Вики Цыгановой, привезите передвижную выставку Ильи Глазунова и у себя в автомобиле слушайте исключительно радио «Радонеж».</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="media-block">
+            <div class="media-block__media">
+              <div class="flex-video">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/EVF-Yvs5Oww?rel=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="media-block__caption">
+              <h6 class="copyright"><i class="icon-camera"></i> Федор Обмайкин / <a href="#">Югополис</a></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-7 medium-offset-2 end column">
+<p>Например, департаменту архитектуры и градостроительства не стоит стесняться писать официальные письма вроде такого: «Уважаемый Александр Александрович! Учитывая многочисленные обращения жителей города Краснодара и в связи с возможным нарушением действующего законодательства просим Вас рассмотреть возможность отмены строительства 100-этажного многоквартирного дома в историческом центре Краснодара».</p>
+<p>Если сами не справитесь, у департамента культуры шаблон попросите.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+            <div class="longread-block__main medium-10 medium-offset-1 end column">
+
+              <div class="table-responsive">
+                <table class="event-table">
+                  <thead>
+                    <tr>
+                      <th>Место проведения</th>
+                      <th>Время</th>
+                      <th>Наименование мероприятия</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">Сквер имени Г.К.Жукова</td>
+                      <td>17.30 &ndash; 18.00</td>
+                      <td>@Пролог<br>
+                      Презентационное выступление гусляра</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">Ул. Красная<br>
+                      Ул. Гимназическая<br>
+                      Сквер имени Г.К. Жукова</td>
+                      <td>18.30 &ndash; 19.00</td>
+                      <td>Парадное шествие казачьей кавалерии и девушек-барабанщиц</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">Сквер имени Г.К.Жукова</td>
+                      <td>19.00 &ndash; 22.00</td>
+                      <td>Праздничная театрализованная программа, посвященная Году российской истории и Отечественной войне 1812 года<br>
+                      Проект «Казачья баллада»<br>
+                      Интерактивные состязания (перетягивание каната, бой мешками, гири, потешные бои на пиках и шашках)<br>
+                      Мастер-класс причёсок XIX века<br>
+                      Показ нарядов Наташи Ростовой</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="longread-block">
+        <div class="page-width-wrapper">
+          <div class="row collapse">
+
+            <div class="longread-block__main medium-7 medium-push-2 column">
+<p>Страшно интересно, кстати, какие выставки посещали в детстве люди, которые позднее ощутили в себе призвание докторов богословия, хоругвеносцев и прочих православных активистов. Куда, спрашивается, в те годы смотрела прокуратура?</p>
+<p>Со временем Остапов всё больше несло, и они заваливали правоохранителей тоннами кляуз и доносов на музыкальный фестиваль «Кубана». Пьянство, разврат и непатриотичное голое выступление Noize MC — таков, по мнению жалобщиков, далеко не полный список преступлений организаторов фестиваля.</p>
+<p>Страшно интересно, кстати, какие выставки посещали в детстве люди, которые позднее ощутили в себе призвание докторов богословия, хоругвеносцев и прочих православных активистов. Куда, спрашивается, в те годы смотрела прокуратура?</p>
+<p>Со временем Остапов всё больше несло, и они заваливали правоохранителей тоннами кляуз и доносов на музыкальный фестиваль «Кубана». Пьянство, разврат и непатриотичное голое выступление Noize MC — таков, по мнению жалобщиков, далеко не полный список преступлений организаторов фестиваля.</p>
+<p>Страшно интересно, кстати, какие выставки посещали в детстве люди, которые позднее ощутили в себе призвание докторов богословия, хоругвеносцев и прочих православных активистов. Куда, спрашивается, в те годы смотрела прокуратура?</p>
+<p>Со временем Остапов всё больше несло, и они заваливали правоохранителей тоннами кляуз и доносов на музыкальный фестиваль «Кубана». Пьянство, разврат и непатриотичное голое выступление Noize MC — таков, по мнению жалобщиков, далеко не полный список преступлений организаторов фестиваля.</p>
+<hr>
+<p>Страшно интересно, кстати, какие выставки посещали в детстве люди, которые позднее ощутили в себе призвание докторов богословия, хоругвеносцев и прочих православных активистов. Куда, спрашивается, в те годы смотрела прокуратура?</p>
+<hr class="dotted">
+<p>Со временем Остапов всё больше несло, и они заваливали правоохранителей тоннами кляуз и доносов на музыкальный фестиваль «Кубана». Пьянство, разврат и непатриотичное голое выступление Noize MC — таков, по мнению жалобщиков, далеко не полный список преступлений организаторов фестиваля.</p>
+<hr class="three">
+<p>Со временем Остапов всё больше несло, и они заваливали правоохранителей тоннами кляуз и доносов на музыкальный фестиваль «Кубана». Пьянство, разврат и непатриотичное голое выступление Noize MC — таков, по мнению жалобщиков, далеко не полный список преступлений организаторов фестиваля.</p>
+
+            </div>
+
+            <div class="medium-2 medium-pull-7 column end">
+              <div class="side-stat image">
+                <img src="assets/img/319x213_out__.jpg" alt=""/>
+                <div class="text">
+                  <p>Начиная с 1 октября 2014 года на ремонт каждого пострадавшего транспортного средства выделяется до 400 тысяч</p>
+                </div>
+              </div>
+
+              <div class="side-shout">
+                <p>По итогам первого аукциона MOST самой дорогой из проданных стала картина Дмитрия Кочановича «Любовь с первого взгляда», которая была приобретена за 400 тысяч рублей</p>
+              </div>
+
+            </div>
+
+            <div class="medium-3 column">
+              <div class="side-shout">
+                <p>По итогам первого аукциона MOST самой дорогой из проданных стала картина Дмитрия Кочановича «Любовь с первого взгляда», которая была приобретена за 400 тысяч рублей</p>
+              </div>
+
+              <div class="side-reference">
+                <div class="side-reference__thumb">
+                  <img src="assets/img/381x10000_out__.jpg" alt=""/>
+                </div>
+                <header class="side-reference__header">
+                  <h5 class="title">Ждан Тихонов</h5>
+                  <p>Генеральный директор муниципальной телекомпании «Краснодар плюс»</p>
+                </header>
+                <div class="side-reference__content">
+<p>Работает в СМИ с 1997 года. Начинал карьеру ассистентом телеоператора на ГТРК «Кубань». С 1999 по 2002 год работал телеоператором в ОАО «Общественное Российское телевидение» (сейчас «Первый канал»), неоднократно выезжал в командировки в зоны боевых действий. С 2003 по 2005-й работал заместителем гендиректора «Нового телевидения Кубани». С 2005-го по настоящее время — генеральный директор муниципальной телерадиокомпании «Краснодар». С отличием окончил Краснодарский госуниверситет культуры и искусств. 2 года назад защитил диплом МВА. Доцент кафедры режиссуры кино и телевидения КГУКИ. Кандидат философских наук. Женат, воспитывает троих детей.</p>
+                </div>
+              </div>
+              
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      
+    </div> <!-- /content-wrapper -->
+	</div> <!-- /page-content -->
+
+
+<!-- FOOTER -->
+
+    <footer class="page-footer">
+      <div class="page-width-wrapper">
+
+        <div class="footer-menu row collapse">
+        	<div class="menu medium-6 column">
+            <ul class="inline-list">
+              <li><a href="#">О проекте</a></li>
+              <li><a href="#">Реклама</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+					</div>
+          <div class="social medium-6 column clearfix">
+	          <ul class="inline-list">
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-rss"></i></a></li>
+            </ul>
+	        </div>
+        </div>
+
+        <div class="copyright clearfix">
+          <p>Свидетельство о регистрации СМИ Эл No. ФС77-40121 от 04.06.2010 г.</p>
+          <p>&copy; 2010 &ndash; 2015, OOO &quot;Югополис&quot;</p>
+        </div>
+
+        <div class="designed">
+          <span class="label radius right">18+</span>
+          <p class="design">Дизайн <a href="#">Worksterdam</a></p>
+        </div>
+
+      </div>
+    </footer>
+
+</div> <!-- /page-container -->
+
+	</div>
+ </div>
+
+<script type="text/javascript">
+	$(document).foundation();
+</script>
+
+</body>
+</html>
